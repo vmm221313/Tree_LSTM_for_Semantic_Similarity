@@ -47,14 +47,6 @@ If you want to use a Docker container, but want to persist data and checkpoints 
 ```
 **NOTE**: Setting the environment variable OMP_NUM_THREADS=1 usually gives a speedup on the CPU. Use it like `OMP_NUM_THREADS=1 python main.py`. To run on a GPU, set the CUDA_VISIBLE_DEVICES instead. Usually, CUDA does not give much speedup here, since we are operating at a batchsize of `1`.
 
-### Notes
- - (**Apr 02, 2018**) Added Dockerfile
- - (**Apr 02, 2018**) Now works on **PyTorch 0.3.1** and **Python 3.6**, removed dependency on **Python 2.7**
- - (**Nov 28, 2017**) Added **frozen embeddings**, closed gap to paper.
- - (**Nov 08, 2017**) Refactored model to get **1.5x - 2x speedup**.
- - (**Oct 23, 2017**) Now works with **PyTorch 0.2.0**.
- - (**May 04, 2017**) Added support for **sparse tensors**. Using the `--sparse` argument will enable sparse gradient updates for `nn.Embedding`, potentially reducing memory usage.
-     - There are a couple of caveats, however, viz. weight decay will not work in conjunction with sparsity, and results from the original paper might not be reproduced using sparse embeddings.
 
 ### Acknowledgements
 Thanks to Riddhiman Dasgupta
