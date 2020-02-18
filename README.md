@@ -1,8 +1,7 @@
-# Tree_LSTM_for_Semantic_Similarity
+# Tree-Structured LSTMs for Semantic Similarity
 
-# Based on this repo - https://github.com/dasguptar/treelstm.pytorch
+### Based on this repo - https://github.com/dasguptar/treelstm.pytorch
 
-# Tree-Structured Long Short-Term Memory Networks
 This is a [PyTorch](http://pytorch.org/) implementation of Tree-LSTM as described in the paper [Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks](http://arxiv.org/abs/1503.00075) by Kai Sheng Tai, Richard Socher, and Christopher Manning. On the semantic similarity task using the SICK dataset, this implementation reaches:
  - Pearson's coefficient: `0.8492` and MSE: `0.2842` using hyperparameters `--lr 0.010 --wd 0.0001 --optim adagrad --batchsize 25`
  - Pearson's coefficient: `0.8674` and MSE: `0.2536` using hyperparameters `--lr 0.025 --wd 0.0001 --optim adagrad --batchsize 25 --freeze_embed`
